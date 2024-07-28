@@ -1,0 +1,258 @@
+/* start globl roules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+   margin: 0px;
+   padding: 0px;
+   scroll-behavior: smooth;
+  }
+  a{
+    
+    text-decoration: none;
+  }
+  a:hover{
+    text-decoration: none;
+  }
+  /* end global roules */
+
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.line1Container,.line2Container{
+   display: flex;
+
+    white-space: nowrap; 
+    overflow: hidden;
+}
+
+.line1 , .line2{
+    max-width: 100%; 
+    
+   
+}
+
+
+
+ p {
+   
+     transition: 0.1s all ease;
+    font-size: 80px;
+    margin: 0;
+    padding: 0 30px;
+   
+    
+}
+
+
+@keyframes mover1 {
+    0% {
+        transform: translatex(0%); /* يبدأ النص من خارج الحاوية على اليمين */
+    }
+    100% {
+        transform: translatex(-100%); /* ينتهي النص عند خارج الحاوية على اليسار */
+    }
+}
+
+.line1 {transition: 0.3s all ease;
+    animation: mover1 10s linear infinite;
+}
+
+@keyframes mover2 {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.line2 {
+    animation: mover2 10s linear infinite;
+}
+
+
+
+  .hBox{display: flex;
+    /* flex-direction: column; */
+    /* align-content: space-between; */
+    justify-content: center;
+    align-content: center;
+  }
+.bttn{
+    border: 2px rgb(222, 215, 215) solid;
+    width: 50px ;
+    height: 50px;
+border-radius: 50%;
+justify-content: center;
+text-align: center;
+align-items: center;
+padding-top: 10px;
+cursor: pointer;
+transition: 0.3s all ease-in-out;
+box-sizing: border-box;
+}
+.bttn i{margin: auto;
+    border: none;
+}
+.bttn:hover{
+    background-color: rgb(68, 67, 67);
+}
+.bttn:hover i{
+    color: white;
+}
+.picBox{display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.imgHolder{
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 15px;
+    transition: 0.5s all ease-in-out;
+    background-color: aqua;
+    
+   
+    
+}
+.imgHolder img{
+    width: 100%;
+    height: 100%;
+}
+.box:hover .imgHolder{
+ 
+        transform: rotate(-10deg);
+}
+.works h5{
+    color: gray;
+}
+
+.showBox{position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.694);
+    z-index: 15;
+    --animate-duration: 0.3s;
+    transform: 0.2s all ease;
+}
+.iconX{
+      position: relative;
+     background-color: aqua;
+      
+}
+.iconX i{position: absolute;
+    right: 0;
+  background-color: rgb(223, 227, 230);
+    color: rgb(47, 46, 46);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    
+}
+.showBox .contain{
+    background-color: azure;
+    width: 90%;
+    margin:2px auto;
+    border-radius: 5px;
+    
+}
+.showBox .imgHolder{
+    min-width: 90%;
+    height:auto;
+}
+.showBox .form{
+    padding: 20px 20px 20px 30px;
+    background-color: rgb(221, 235, 238);
+    border-radius: 5px;
+    
+}
+.showBox .form button{
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden; padding: 7px 30px;
+    font-weight: 600;
+}
+.showBox .form button::after{content: "";
+    position: absolute;
+    height: 7px ;
+    width: 150px;
+    background-color: rgba(215, 233, 248, 0.264);
+    transform: rotate(-35deg);
+    top: -100%;
+    left: -60%;
+    transition: 0.5s all ease;
+   
+
+}
+.showBox .form button:hover::after{
+    left:100%;
+    top:100%
+}
+.tags strong , .product strong{
+    color: rgb(85, 85, 85);
+}
+.tags .tag{ 
+    color: rgb(155, 155, 155);
+    text-decoration: none !important;
+}
+.tags a:hover{
+    text-decoration: none !important;
+}
+.product a{
+    text-decoration: none !important;
+}
+.form{
+    height:fit-content;
+}
+.form p {
+    font-size: 1rem;
+    line-height: 2;
+}
+
+.text p{
+    font-size: 1.25rem;
+    line-height: 2;
+}
+@media screen  and (max-width: 577px) {
+    .picBox .imgHolder{
+        max-width: 250px;
+    }
+    
+}
+
+@media screen  and (min-width: 578px) and (max-width: 767px){
+    .picBox .imgHolder{
+        max-width: 350px;
+    }
+    
+}
+@media screen  and (min-width: 768px){
+    .box{
+        max-height: 200px;
+    }
+    .picBox .imgHolder{ max-width: 450px;
+        z-index: 11;
+       opacity: 0;
+
+    }
+    .box:hover .imgHolder{
+        opacity: 1;
+    }
+.bttn{
+        width: 60px ;
+    height: 60px;
+    padding-top: 16px;
+    }
+}
+.hidden{
+    display: none;
+}
